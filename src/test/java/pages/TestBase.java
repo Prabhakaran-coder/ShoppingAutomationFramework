@@ -6,7 +6,6 @@ import java.util.Properties;
 import org.testng.annotations.BeforeMethod;
 
 import com.microsoft.playwright.Browser;
-import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
@@ -26,10 +25,10 @@ public class TestBase{
         String env = System.getProperty("env")!=null ? System.getProperty("env") : SystemProps.getProperty("env");
         String BrowserName = System.getProperty("browser")!=null?System.getProperty("browser"): SystemProps.getProperty("browser");
         browser = switch (BrowserName) {
-            case "chrome" -> playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-            case "firefox" -> playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
+            case "chrome" -> playwright.chromium().launch();
+            case "firefox" -> playwright.firefox().launch();
             
-            case "safari" -> playwright.webkit().launch(new BrowserType.LaunchOptions().setHeadless(false));
+            case "safari" -> playwright.webkit().launch();
             default -> throw new IllegalArgumentException("Invalid browser name: " + SystemProps.getProperty("browser"));
         };
         BaseUrl = SystemProps.getProperty(env + ".url");
