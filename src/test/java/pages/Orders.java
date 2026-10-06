@@ -33,7 +33,7 @@ public final class Orders {
         
         noOfOrders = page.locator(TABLE_BODY_ROW_FIELD).count();
         System.out.println("Number of orders: " + noOfOrders);
-        randomNumber = (int) (Math.random() * noOfOrders);
+        randomNumber = (int) (Math.random() * (noOfOrders-1));
         orderId = page.locator("tbody tr").nth(randomNumber).locator("th").textContent();
         System.out.println("Selected order ID: " + orderId);
     }

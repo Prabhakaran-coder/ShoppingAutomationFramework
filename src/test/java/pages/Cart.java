@@ -44,7 +44,6 @@ public class Cart {
         //page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Place Order ")).click();
         page.locator(PLACEORDER_FIELD, new Page.LocatorOptions().setHasText(PLACEORDER_BUTTON)).click();
         PlaywrightAssertions.assertThat(page.getByText("Order Placed Successfully")).isVisible();
-        page.waitForTimeout(1000);
         System.out.println(page.locator(ORDERID_FIELD).textContent());
         OrderId = page.locator(ORDERID_FIELD).textContent().substring(2,26);
     }

@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="tests.RegistrationFrameworkTest" time="181.107" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="tests.RegistrationFrameworkTest" time="13.405" tests="1" errors="0" skipped="0" failures="0">
   <properties>
-    <property name="jpda.address" value="50940"/>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="D:\Playwright_practice\Shopping\shopping\target\test-classes;D:\Playwright_practice\Shopping\shopping\target\classes;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\playwright\1.63.0\playwright-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\Prabhakaran\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\Prabhakaran\.m2\repository\org\jspecify\jspecify\1.0.1\jspecify-1.0.1.jar;C:\Users\Prabhakaran\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\driver\1.63.0\driver-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\driver-bundle\1.63.0\driver-bundle-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\org\testng\testng\7.12.0\testng-7.12.0.jar;C:\Users\Prabhakaran\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Prabhakaran\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Prabhakaran\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
+    <property name="java.class.path" value="D:\Playwright_practice\Shopping\target\test-classes;D:\Playwright_practice\Shopping\target\classes;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\playwright\1.63.0\playwright-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\Prabhakaran\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\Prabhakaran\.m2\repository\org\jspecify\jspecify\1.0.1\jspecify-1.0.1.jar;C:\Users\Prabhakaran\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\driver\1.63.0\driver-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\driver-bundle\1.63.0\driver-bundle-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\org\testng\testng\7.12.0\testng-7.12.0.jar;C:\Users\Prabhakaran\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Prabhakaran\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Prabhakaran\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="user.timezone" value="Asia/Calcutta"/>
-    <property name="forkMode" value="once"/>
     <property name="os.name" value="Windows 11"/>
     <property name="java.vm.specification.version" value="25"/>
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="D:\JAVA_DIR\bin"/>
-    <property name="sun.java.command" value="C:\Users\Prabhakaran\AppData\Local\Temp\surefire5478985964052668990\surefirebooter-20261006191403758_3.jar C:\Users\Prabhakaran\AppData\Local\Temp\surefire5478985964052668990 2026-10-06T19-14-03_451-jvmRun1 surefire-20261006191403758_1tmp surefire_0-20261006191403758_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Prabhakaran\AppData\Local\Temp\surefire12673040746768702307\surefirebooter-20261007021951784_3.jar C:\Users\Prabhakaran\AppData\Local\Temp\surefire12673040746768702307 2026-10-07T02-19-51_544-jvmRun1 surefire-20261007021951784_1tmp surefire_0-20261007021951784_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="tests.RegistrationFrameworkTest#testMethod"/>
-    <property name="surefire.test.class.path" value="D:\Playwright_practice\Shopping\shopping\target\test-classes;D:\Playwright_practice\Shopping\shopping\target\classes;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\playwright\1.63.0\playwright-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\Prabhakaran\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\Prabhakaran\.m2\repository\org\jspecify\jspecify\1.0.1\jspecify-1.0.1.jar;C:\Users\Prabhakaran\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\driver\1.63.0\driver-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\driver-bundle\1.63.0\driver-bundle-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\org\testng\testng\7.12.0\testng-7.12.0.jar;C:\Users\Prabhakaran\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Prabhakaran\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Prabhakaran\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
+    <property name="surefire.test.class.path" value="D:\Playwright_practice\Shopping\target\test-classes;D:\Playwright_practice\Shopping\target\classes;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\playwright\1.63.0\playwright-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\Prabhakaran\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\Prabhakaran\.m2\repository\org\jspecify\jspecify\1.0.1\jspecify-1.0.1.jar;C:\Users\Prabhakaran\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\driver\1.63.0\driver-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\driver-bundle\1.63.0\driver-bundle-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\org\testng\testng\7.12.0\testng-7.12.0.jar;C:\Users\Prabhakaran\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Prabhakaran\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Prabhakaran\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Prabhakaran"/>
     <property name="user.language" value="en"/>
@@ -28,12 +26,12 @@
     <property name="java.version.date" value="2026-08-18"/>
     <property name="java.home" value="D:\JAVA_DIR"/>
     <property name="file.separator" value="\"/>
-    <property name="basedir" value="D:\Playwright_practice\Shopping\shopping"/>
+    <property name="basedir" value="D:\Playwright_practice\Shopping"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Prabhakaran\AppData\Local\Temp\surefire5478985964052668990\surefirebooter-20261006191403758_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Prabhakaran\AppData\Local\Temp\surefire12673040746768702307\surefirebooter-20261007021951784_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="25.0.4.1+1-LTS-5"/>
@@ -44,13 +42,12 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
-    <property name="jpda.listen" value="true"/>
     <property name="maven.ext.class.path" value="C:\Users\Prabhakaran\.vscode\extensions\oracle.oracle-java-27.0.0\nbcode\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="localRepository" value="C:\Users\Prabhakaran\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\PRABHA~1\AppData\Local\Temp\"/>
     <property name="java.version" value="25.0.4.1"/>
-    <property name="user.dir" value="D:\Playwright_practice\Shopping\shopping"/>
+    <property name="user.dir" value="D:\Playwright_practice\Shopping"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
@@ -63,13 +60,15 @@
     <property name="stdin.encoding" value="Cp1252"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
-    <property name="maven.surefire.debug" value="-agentlib:jdwp=transport=dt_socket,server=n,address=50940"/>
   </properties>
-  <testcase name="testMethod" classname="tests.RegistrationFrameworkTest" time="175.117">
-    <system-out><![CDATA[NoOfCards: 3
-Random card heading is: iphone 13 pro
-ID is: 6960ea76c941646b7a8b3dd5
- | 6ac4fbdb2be7a4bc2b8eb272 | 
+  <testcase name="testMethod" classname="tests.RegistrationFrameworkTest" time="7.585">
+    <system-out><![CDATA[1
+Random card heading is: ZARA COAT 3
+ID is: 6960eac0c941646b7a8b3e68
+ | 6ac55efd2be7a4bc2b8fae5e | 
+Number of orders: 7
+Selected order ID: 6ac535542be7a4bc2b8f66e6
+randomNumber:2
 ]]></system-out>
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
 SLF4J(W): Defaulting to no-operation (NOP) logger implementation

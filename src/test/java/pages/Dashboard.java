@@ -23,11 +23,13 @@ public final class Dashboard {
     }
 
     public void Filter() {
-        
+        page.locator(".btn.btn-custom").getByText("Home").waitFor();
         int noOfCards = page.locator(CARD_FIELD).count();
-        System.out.println("NoOfCards: " + noOfCards);
-        int randomNumber = (int) (Math.random() * noOfCards);
+        
+        int randomNumber = (int) (Math.random() * (noOfCards-1));
+        System.out.println(randomNumber);
         randomCardHeading = page.locator(".card").getByRole(AriaRole.HEADING).nth(randomNumber).textContent();
+        page.locator(".card .text-muted").first().waitFor();
         this.maxPrice = Integer.parseInt(page.locator(".card .text-muted").nth(randomNumber).textContent().substring(2, 7));
         this.minPrice = (int) (Math.random() * this.maxPrice);
        
@@ -36,11 +38,10 @@ public final class Dashboard {
    
     public String ViewAndBook() {
         page.getByPlaceholder(SEARCH_FIELD).nth(1).fill(randomCardHeading);
-        
         System.out.println("Random card heading is: " + randomCardHeading);
         page.getByPlaceholder("Min Price").nth(1).fill(String.valueOf(minPrice));
         page.getByPlaceholder("Max Price").nth(1).fill(String.valueOf(maxPrice));
-        page.waitForTimeout(2000);
+        page.locator(CARD_FIELD).first().waitFor();
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(VIEW_BUTTON_FIELD)).click();
         
         String ID = page.url().substring(page.url().indexOf("#"));

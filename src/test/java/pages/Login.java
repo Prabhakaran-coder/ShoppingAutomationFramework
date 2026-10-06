@@ -1,9 +1,8 @@
 package pages;
 
-import org.testng.Assert;
-
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Page.GetByRoleOptions;
+import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.options.AriaRole;
 
 public class Login {
@@ -19,12 +18,12 @@ public class Login {
 
     public void navigateToLoginPage() {
         page.navigate(BaseUrl);
-        page.waitForTimeout(3000);
-        Assert.assertTrue(page.getByRole(AriaRole.HEADING, new GetByRoleOptions().setName("Log in")).isVisible());
+        
+        PlaywrightAssertions.assertThat(page.getByRole(AriaRole.HEADING, new GetByRoleOptions().setName("Log in"))).isVisible();
         page.locator(email).fill("prabhatechi123@gmail.com");
         page.locator(password).fill("P@ssword123");
         page.locator("#login").click();
-        page.waitForTimeout(1000);
+        
         //Assert.assertTrue(page.getByRole(AriaRole.ALERT,new GetByRoleOptions().setName("Login Successfully")).isVisible());
     }
 
