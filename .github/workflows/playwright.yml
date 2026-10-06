@@ -40,7 +40,7 @@ jobs:
       - name: Build & Install
         run: mvn -B install -D skipTests --no-transfer-progress
       - name: Ensure browsers are installed
-        run: mvn exec:java -e -D exec.mainclass=com.microsoft.playwright.CLI -D exec.args='install --with-deps'
+        run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
       - name: Run Tests
         run: mvn test -PSmoke -Dbrowser=${{ github.event.inputs.browser}} -Denv=${{github.event.inputs.environment}}    
 
