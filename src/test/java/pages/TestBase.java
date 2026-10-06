@@ -25,11 +25,10 @@ public class TestBase{
         String env = System.getProperty("env")!=null ? System.getProperty("env") : SystemProps.getProperty("env");
         String BrowserName = System.getProperty("browser")!=null?System.getProperty("browser"): SystemProps.getProperty("browser");
         browser = switch (BrowserName) {
-            case "chrome" -> playwright.chromium().launch();
             case "firefox" -> playwright.firefox().launch();
             
             case "safari" -> playwright.webkit().launch();
-            default -> throw new IllegalArgumentException("Invalid browser name: " + SystemProps.getProperty("browser"));
+            default -> playwright.chromium().launch();
         };
         BaseUrl = SystemProps.getProperty(env + ".url");
         //page.setViewportSize(1920, 1080);
