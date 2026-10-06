@@ -1,0 +1,52 @@
+package pages;
+
+import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.AriaRole;
+
+public final class Dashboard {
+
+    Page page;
+
+    public static final String SEARCH_FIELD = "search";
+    public static final String CARD_FIELD = ".card";
+    public static final String VIEW_BUTTON_FIELD = "View";
+    public static final String ADD_TO_CARD_FIELD = "Add to Cart";
+
+    int maxPrice;
+    int minPrice;
+    
+    String randomCardHeading;
+
+    public Dashboard(Page page) {
+        this.page = page;
+        Filter();
+    }
+
+    public void Filter() {
+        
+        int noOfCards = page.locator(CARD_FIELD).count();
+        System.out.println("NoOfCards: " + noOfCards);
+        int randomNumber = (int) (Math.random() * noOfCards);
+        randomCardHeading = page.locator(".card").getByRole(AriaRole.HEADING).nth(randomNumber).textContent();
+        this.maxPrice = Integer.parseInt(page.locator(".card .text-muted").nth(randomNumber).textContent().substring(2, 7));
+        this.minPrice = (int) (Math.random() * this.maxPrice);
+       
+    }
+
+   
+    public String ViewAndBook() {
+        page.getByPlaceholder(SEARCH_FIELD).nth(1).fill(randomCardHeading);
+        
+        System.out.println("Random card heading is: " + randomCardHeading);
+        page.getByPlaceholder("Min Price").nth(1).fill(String.valueOf(minPrice));
+        page.getByPlaceholder("Max Price").nth(1).fill(String.valueOf(maxPrice));
+        page.waitForTimeout(2000);
+        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(VIEW_BUTTON_FIELD)).click();
+        
+        String ID = page.url().substring(page.url().indexOf("#"));
+        ID=ID.substring(28, ID.length());
+        System.out.println("ID is: " + ID);
+        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(ADD_TO_CARD_FIELD)).click();
+        return ID;
+    }
+}

@@ -1,0 +1,3 @@
+tests\RegistrationFrameworkTest.class
+pages\Registration.class
+pages\TestBase.class
