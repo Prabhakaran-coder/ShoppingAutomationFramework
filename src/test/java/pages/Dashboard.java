@@ -1,6 +1,7 @@
 package pages;
 
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.options.AriaRole;
 
 public final class Dashboard {
@@ -52,6 +53,7 @@ public final class Dashboard {
         ID=ID.substring(28, ID.length());
         System.out.println("ID is: " + ID);
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(ADD_TO_CARD_FIELD)).click();
+        PlaywrightAssertions.assertThat(page.getByText("Product Added To Cart")).isVisible();
         System.out.println("ID added to cart:"+ID);
         return ID;
     }
