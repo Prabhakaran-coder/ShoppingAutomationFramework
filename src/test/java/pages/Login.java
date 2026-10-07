@@ -32,8 +32,8 @@ public class Login {
             }
 
         PlaywrightAssertions.assertThat(page.getByRole(AriaRole.HEADING, new GetByRoleOptions().setName("Log in"))).isVisible();
-        page.locator(EMAIL).fill(System.getenv(username));
-        page.locator(PASSWORD).fill(System.getenv(password));
+        page.locator(EMAIL).fill(username);
+        page.locator(PASSWORD).fill(password);
         page.locator("#login").click();
         
         //Assert.assertTrue(page.getByRole(AriaRole.ALERT,new GetByRoleOptions().setName("Login Successfully")).isVisible());

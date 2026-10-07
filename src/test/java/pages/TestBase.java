@@ -27,7 +27,6 @@ public class TestBase{
         String BrowserName = System.getProperty("browser")!=null?System.getProperty("browser"): SystemProps.getProperty("browser");
         browser = switch (BrowserName) {
             case "firefox" -> playwright.firefox().launch();
-            
             case "safari" -> playwright.webkit().launch();
             default -> playwright.chromium().launch();
         };
