@@ -2,6 +2,7 @@ package pages;
 
 import org.testng.Assert;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.options.AriaRole;
@@ -26,7 +27,9 @@ public class Cart {
     public void viewCart(String ItemId) {
         page.locator(".btn-custom", new Page.LocatorOptions().setHasText(CART_FIELD)).click();
         
-         PlaywrightAssertions.assertThat(page.locator(this.ITEMID_FIELD, new Page.LocatorOptions().setHasText(ItemId))).isVisible();
+        Locator itemIdLocator = page.locator(this.ITEMID_FIELD, new Page.LocatorOptions().setHasText(ItemId));
+        itemIdLocator.waitFor();
+        PlaywrightAssertions.assertThat(itemIdLocator).isVisible();
         int noOfItemsInCart = page.locator(this.CART_SECTION).count();
         for(int i = 0; i < noOfItemsInCart; i++) {
             String itemIdInCart = page.locator(this.ITEMID_FIELD).nth(i).textContent().substring(1);
