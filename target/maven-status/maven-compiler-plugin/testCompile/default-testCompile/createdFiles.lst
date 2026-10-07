@@ -1,3 +1,7 @@
+pages\Cart.class
 tests\RegistrationFrameworkTest.class
 pages\Registration.class
 pages\TestBase.class
+pages\Dashboard.class
+pages\Login.class
+pages\Orders.class

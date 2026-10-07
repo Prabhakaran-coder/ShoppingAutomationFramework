@@ -1,5 +1,0 @@
-# Created at 2026-10-07T02:00:43.607
-Boot Manifest-JAR contains absolute paths in classpath 'D:\Playwright_practice\Shopping\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-'other' has different root
-

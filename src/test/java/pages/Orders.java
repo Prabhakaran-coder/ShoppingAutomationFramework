@@ -52,6 +52,7 @@ public final class Orders {
         
         page.locator(TABLE_BODY_ROW_FIELD).nth(randomNumber).locator(DELETE_BUTTON_FIELD).click();
         PlaywrightAssertions.assertThat(page.getByText("Orders Deleted Successfully")).isVisible();
+        System.out.println("Orders Deleted Successfully");
         PlaywrightAssertions.assertThat(page.getByText(orderId)).isHidden();
     }
 

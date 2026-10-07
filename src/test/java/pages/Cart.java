@@ -29,9 +29,11 @@ public class Cart {
         System.out.println("CART PAGE: ");
         
         page.locator(".btn-custom", new Page.LocatorOptions().setHasText(CART_FIELD)).click();
-        
+        PlaywrightAssertions.assertThat(page.getByText("My Cart")).isVisible();
+
+       
         Locator itemIdLocator = page.locator(this.ITEMID_FIELD, new Page.LocatorOptions().setHasText(ItemId));
-        itemIdLocator.waitFor();
+       
         PlaywrightAssertions.assertThat(itemIdLocator).isVisible();
         int noOfItemsInCart = page.locator(this.CART_SECTION).count();
         for(int i = 0; i < noOfItemsInCart; i++) {
@@ -52,6 +54,7 @@ public class Cart {
         PlaywrightAssertions.assertThat(page.getByText("Order Placed Successfully")).isVisible();
         System.out.println(page.locator(ORDERID_FIELD).textContent());
         OrderId = page.locator(ORDERID_FIELD).textContent().substring(2,26);
+        System.out.println("Order Placed Successfully");
     }
 
 }
