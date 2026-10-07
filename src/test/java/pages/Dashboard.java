@@ -26,7 +26,7 @@ public final class Dashboard {
         page.locator(".btn.btn-custom").getByText("Home").waitFor();
         int noOfCards = page.locator(CARD_FIELD).count();
         
-        int randomNumber = (int) (Math.random() * (noOfCards-1));
+        int randomNumber = (int) (Math.random() * (noOfCards));
         System.out.println(randomNumber);
         randomCardHeading = page.locator(".card").getByRole(AriaRole.HEADING).nth(randomNumber).textContent();
         page.locator(".card .text-muted").first().waitFor();
