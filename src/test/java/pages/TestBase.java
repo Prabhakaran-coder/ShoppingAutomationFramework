@@ -22,7 +22,8 @@ public class TestBase{
         FileInputStream fis = new FileInputStream("src/test/java/resources/objects.properties");
         SystemProps.load(fis);
         playwright = Playwright.create();
-        String env = System.getProperty("env")!=null ? System.getProperty("env") : SystemProps.getProperty("env");
+        String env = System.getProperty("env");
+        env = env != null && !env.isEmpty() ? env : SystemProps.getProperty("env");
         String BrowserName = System.getProperty("browser")!=null?System.getProperty("browser"): SystemProps.getProperty("browser");
         browser = switch (BrowserName) {
             case "firefox" -> playwright.firefox().launch();
@@ -30,10 +31,10 @@ public class TestBase{
             case "safari" -> playwright.webkit().launch();
             default -> playwright.chromium().launch();
         };
-        BaseUrl = SystemProps.getProperty(env + ".url");
-        //page.setViewportSize(1920, 1080);
+        BaseUrl = SystemProps.getProperty(env+".url");
+        
         page = browser.newPage();
-        //page.navigate(BaseUrl);
+        
     } 
 
 }

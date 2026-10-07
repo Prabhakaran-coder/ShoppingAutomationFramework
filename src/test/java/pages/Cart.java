@@ -34,6 +34,7 @@ public class Cart {
         
         Locator itemIdLocator = page.locator(this.ITEMID_FIELD, new Page.LocatorOptions().setHasText(ItemId));
         PlaywrightAssertions.assertThat(itemIdLocator).isVisible();
+        
         int noOfItemsInCart = page.locator(this.CART_SECTION).count();
         for(int i = 0; i < noOfItemsInCart; i++) {
             String itemIdInCart = page.locator(this.ITEMID_FIELD).nth(i).textContent().substring(1);
