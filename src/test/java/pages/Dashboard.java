@@ -42,6 +42,7 @@ public final class Dashboard {
         page.getByPlaceholder("Min Price").nth(1).fill(String.valueOf(minPrice));
         page.getByPlaceholder("Max Price").nth(1).fill(String.valueOf(maxPrice));
         page.keyboard().press("Enter");
+        page.waitForTimeout(2000);
         page.locator(CARD_FIELD).first().waitFor();
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(VIEW_BUTTON_FIELD)).click();
         
