@@ -1,5 +1,6 @@
 package pages;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.options.AriaRole;
@@ -52,7 +53,10 @@ public final class Dashboard {
         String ID = page.url().substring(page.url().indexOf("#"));
         ID=ID.substring(28, ID.length());
         System.out.println("ID is: " + ID);
-        page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(ADD_TO_CARD_FIELD)).click();
+
+        Locator randomCard = page.locator(".col-lg-6.rtl-text")
+        .filter(new Locator.FilterOptions().setHasText(randomCardHeading));
+        randomCard.getByRole(AriaRole.BUTTON, new Locator.GetByRoleOptions().setName(ADD_TO_CARD_FIELD)).click();
         PlaywrightAssertions.assertThat(page.getByText("Product Added To Cart")).isVisible();
         System.out.println("ID added to cart:"+ID);
         return ID;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="16.304" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="TestSuite" time="11.577" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="D:\JAVA_DIR\bin"/>
-    <property name="sun.java.command" value="C:\Users\Prabhakaran\AppData\Local\Temp\surefire16906680458781791106\surefirebooter-20261007124640469_3.jar C:\Users\Prabhakaran\AppData\Local\Temp\surefire16906680458781791106 2026-10-07T12-46-40_242-jvmRun1 surefire-20261007124640469_1tmp surefire_0-20261007124640469_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Prabhakaran\AppData\Local\Temp\surefire11069917559202976654\surefirebooter-20261007132259498_3.jar C:\Users\Prabhakaran\AppData\Local\Temp\surefire11069917559202976654 2026-10-07T13-22-59_320-jvmRun1 surefire-20261007132259498_1tmp surefire_0-20261007132259498_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="d:\Playwright_practice\Shopping\target\test-classes;d:\Playwright_practice\Shopping\target\classes;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\playwright\1.63.0\playwright-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\com\google\code\gson\gson\2.14.0\gson-2.14.0.jar;C:\Users\Prabhakaran\.m2\repository\com\google\errorprone\error_prone_annotations\2.48.0\error_prone_annotations-2.48.0.jar;C:\Users\Prabhakaran\.m2\repository\org\jspecify\jspecify\1.0.1\jspecify-1.0.1.jar;C:\Users\Prabhakaran\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\driver\1.63.0\driver-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\com\microsoft\playwright\driver-bundle\1.63.0\driver-bundle-1.63.0.jar;C:\Users\Prabhakaran\.m2\repository\org\testng\testng\7.12.0\testng-7.12.0.jar;C:\Users\Prabhakaran\.m2\repository\org\slf4j\slf4j-api\2.0.16\slf4j-api-2.0.16.jar;C:\Users\Prabhakaran\.m2\repository\org\jcommander\jcommander\1.83\jcommander-1.83.jar;C:\Users\Prabhakaran\.m2\repository\org\webjars\jquery\3.7.1\jquery-3.7.1.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Prabhakaran\AppData\Local\Temp\surefire16906680458781791106\surefirebooter-20261007124640469_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Prabhakaran\AppData\Local\Temp\surefire11069917559202976654\surefirebooter-20261007132259498_3.jar"/>
     <property name="jdk.net.URLClassPath.disableClassPathURLCheck" value="true"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -62,19 +62,19 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="testMethod" classname="tests.RegistrationFrameworkTest" time="10.114">
+  <testcase name="testMethod" classname="tests.RegistrationFrameworkTest" time="7.199">
     <system-out><![CDATA[DASHBOARD PAGE: 
 1
 Random card heading is: ZARA COAT 3
 ID is: 6960eac0c941646b7a8b3e68
 ID added to cart:6960eac0c941646b7a8b3e68
 CART PAGE: 
- | 6ac5f1e82be7a4bc2b90a0d9 | 
+ | 6ac5fa652be7a4bc2b90b8ef | 
 Order Placed Successfully
 ORDERS PAGE: 
 Number of orders: 7
-Selected order ID: 6ac5cb972be7a4bc2b902e60
-randomNumber:4
+Selected order ID: 6ac530312be7a4bc2b8f5a10
+randomNumber:5
 Orders Deleted Successfully
 ]]></system-out>
     <system-err><![CDATA[SLF4J(W): No SLF4J providers were found.
