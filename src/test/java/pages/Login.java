@@ -11,6 +11,7 @@ public class Login {
 
     public static final String email = "#userEmail";
     public static final String password = "#userPassword";
+    
     public Login(Page page, String BaseUrl) {
         this.page = page;
         this.BaseUrl = BaseUrl;

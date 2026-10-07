@@ -41,6 +41,7 @@ public final class Dashboard {
         System.out.println("Random card heading is: " + randomCardHeading);
         page.getByPlaceholder("Min Price").nth(1).fill(String.valueOf(minPrice));
         page.getByPlaceholder("Max Price").nth(1).fill(String.valueOf(maxPrice));
+        page.keyboard().press("Enter");
         page.locator(CARD_FIELD).first().waitFor();
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(VIEW_BUTTON_FIELD)).click();
         
