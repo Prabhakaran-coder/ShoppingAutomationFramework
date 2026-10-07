@@ -42,6 +42,9 @@ jobs:
       - name: Ensure browsers are installed
         run: mvn exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="install --with-deps"
       - name: Run Tests
+        env:
+          APP_USERNAME: ${{ secrets.APP_USERNAME }}
+          APP_PASSWORD: ${{ secrets.APP_PASSWORD }}
         run: mvn test -PSmoke -Dbrowser=${{ github.event.inputs.browser}} -Denv=${{github.event.inputs.environment}}    
 
 
