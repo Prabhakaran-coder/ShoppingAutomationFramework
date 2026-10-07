@@ -22,6 +22,7 @@ public final class Orders {
     }
 
     public void viewAllOrders() {
+        System.out.println("ORDERS PAGE: ");
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(ORDERS_BUTTON_FIELD)).click();
         page.locator(TABLE_BODY_ROW_FIELD)
             .first()

@@ -23,6 +23,8 @@ public final class Dashboard {
     }
 
     public void Filter() {
+
+        System.out.println("DASHBOARD PAGE: ");
         page.locator(".btn.btn-custom").getByText("Home").waitFor();
         int noOfCards = page.locator(CARD_FIELD).count();
         
@@ -50,6 +52,7 @@ public final class Dashboard {
         ID=ID.substring(28, ID.length());
         System.out.println("ID is: " + ID);
         page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName(ADD_TO_CARD_FIELD)).click();
+        System.out.println("ID added to cart:"+ID);
         return ID;
     }
 }

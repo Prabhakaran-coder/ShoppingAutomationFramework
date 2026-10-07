@@ -25,6 +25,9 @@ public class Cart {
     }
 
     public void viewCart(String ItemId) {
+
+        System.out.println("CART PAGE: ");
+        
         page.locator(".btn-custom", new Page.LocatorOptions().setHasText(CART_FIELD)).click();
         
         Locator itemIdLocator = page.locator(this.ITEMID_FIELD, new Page.LocatorOptions().setHasText(ItemId));
