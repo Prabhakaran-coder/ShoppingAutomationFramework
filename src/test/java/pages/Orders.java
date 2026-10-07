@@ -1,5 +1,6 @@
 package pages;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.assertions.PlaywrightAssertions;
 import com.microsoft.playwright.options.AriaRole;
@@ -49,8 +50,10 @@ public final class Orders {
         }
     
     public void deleteOrder(){
+        Locator randomItem = page.locator(TABLE_BODY_ROW_FIELD).nth(randomNumber)
+    .filter(new Locator.FilterOptions().setHasText(orderId));
         
-        page.locator(TABLE_BODY_ROW_FIELD).nth(randomNumber).locator(DELETE_BUTTON_FIELD).click();
+        randomItem.locator(DELETE_BUTTON_FIELD).click();
         PlaywrightAssertions.assertThat(page.getByText("Orders Deleted Successfully")).isVisible();
         System.out.println("Orders Deleted Successfully");
         PlaywrightAssertions.assertThat(page.getByText(orderId)).isHidden();
